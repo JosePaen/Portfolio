@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- explicacion: lo primero que deben incluir dentro del documento html es el head, 
+    dentro de el agregaremos titulo, enlaces a hojas de estilo y fuentes entre otras cosas -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" /> <!-- CAMBIAR ESTAS IMAGENES/ICONOS-->
+  </head>
+  <!-- repaso de la estructura del head -->
+  <!-- explicacion: Luego deben agregar el body -->
+  <body class="scroll">
+    <!-- explicacion: dentro del body lo primero que deben agregar es el header y la barra de navegacion -->
+    <header class="encabezado">
+      <nav class="navegacion">
+        <a class="navegacion__enlace" href="#presentacion">
+          <h2 class="navegacion__titulo">Jose R. Audicio</h2>
+        </a>
+        <ul class="enlaces">
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#presentacion">Inicio</a>
+          </li>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#sobre-mi">Sobre mi</a>
+          </li>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace" href="#conocimientos">Mis Conocimientos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- repaso de la estructura del header y explicacion de los enlaces -->
+
+    <!-- explicacion: A continuacion incluiremos la etiqueta main -->
+    <main class="principal">
+      <!-- explicacion: dentro de esta etiqueta agregaremos las diferentes secciones de nuestra página -->
+
+      <!-- explicacion: Comenzaremos incluyendo una vista de presentacion -->
+      <section class="presentacion" id="presentacion">
+        <div class="presentacion__contenedor_info">
+          <h1 class="presentacion__titulo">Ing. Electromecánico</h1>
+          <p class="presentacion__parrafo">
+            Ingeniero Electromecánico en transición hacia el mundo tech. Me capacito en Data Science y desarrollo web.
+          </p>
+          <div class="presentacion__contenedor_botones">
+            <a href="#sobre-mi" class="boton" role="button">Sobre mí</a>
+            <a
+              href="./assets/docs/CV - Jose Audicio.pdf"
+              target="_blank"
+              class="boton boton_oscuro"
+              role="button"
+              >Descargar CV</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- repaso de las partes de la seccion -->
+
+      <!-- explicacion: Ahora agregaremos una seccion donde nos explayaremos 
+        sobre nuestra historia personal, para ello escribiremos lo siguiente -->
+      <article class="articulo sobre_mi" id="sobre-mi">
+        <h2 class="articulo__titulo">Conoceme</h2>
+        <div class="articulo__contenedor_descripciones">
+          <section class="seccion_descripcion">
+            <div class="seccion_descripcion__porta_retrato">
+              <img
+                class="seccion_descripcion__imagen"
+                src="./assets/images/profile/yo-temp.png"
+                alt="foto personal"
+                title="Yo"
+              />
+            </div>
+            <div
+              class="seccion_descripcion__info scroll scroll_fino scroll_gris"
+              aria-label="descripcion personal"
+            >
+              <h3 class="seccion_descripcion__titulo" id="sobre_mi">
+                Sobre mi
+              </h3>
+              <p
+                class="seccion_descripcion__parrafo"
+                aria-label="Detalles sobre mi"
+                aria-describedby="sobre_mi"
+              >
+              Soy Ingeniero Electromecánico con experiencia en mantenimiento, construcción, coordinación técnica y supervisión de obras,
+              tanto en el sector público como privado. 
+              Actualmente me encuentro en una etapa de transición profesional hacia el mundo de la tecnología, 
+              capacitándome activamente en Data Science (Python, SQL, R), así como en herramientas de desarrollo web como HTML, CSS y Git/GitHub.
+              Busco combinar mi base técnica y resolutiva con nuevas habilidades digitales para aportar valor en proyectos innovadores y con impacto.
+              </p>
+            </div>
+          </section>
+          <!-- explicacion: seguidamente tendremos una seccion muy similar a la anterior 
+            pero cambiaremos el orden de los elementos dejando la imagen al final -->
+          <section class="seccion_descripcion">
+            <div
+              class="seccion_descripcion__info scroll scroll_fino scroll_gris"
+              aria-label="descripcion personal"
+            >
+              <h3 class="seccion_descripcion__titulo" id="mis_trayectoria">
+                Mi trayectoria profesional
+              </h3>
+              <p
+                class="seccion_descripcion__parrafo"
+                aria-label="Detalles de mi trayectoria"
+                aria-describedby="mi_trayectoria_titulo"
+              >
+              Comencé mi carrera como Técnico en instalaciones eléctricas industriales, participando en la puesta en marcha de maquinaria y tableros de control. 
+              Con el tiempo, sumé experiencia en mantenimiento, supervisión y coordinación de equipos en entornos operativos. 
+              Trabajé en empresas de distintos rubros, incluyendo la agroindustria y el sector gastronómico, donde llegué a desempeñarme como encargado de operaciones. A lo largo de estos años, 
+              desarrollé habilidades técnicas, de gestión y resolución de problemas, que hoy complemento con formación en tecnologías digitales.
+              </p>
+            </div>
+            <div class="seccion_descripcion__porta_retrato">
+              <img
+                class="seccion_descripcion__imagen"
+                src="./assets/images/profile/negro.png"
+                alt="negro"
+                title="negro"
+              />
+            </div>
+          </section>
+        </div>
+      </article>
+      <!-- repaso article sobre mi y su estructura -->
+
+      <!-- explicacion: En la seccion que sigue agregaremos los proyectos en los que trabajaron,
+      no se preocupen si todavia no cuentan con ninguno, en el momento que comiencen a construirlos 
+      podran ir actualizando la informacion de esta seccion -->
+      <article class="articulo conocimientos" id="conocimientos">
+        <h2 class="articulo__titulo">Mis Conocimientos</h2>
+        <div class="contenedor_tarjetas_grid">
+          <article
+          class="tarjeta"
+          aria-label="presentacion de mis conocimientos"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/images/conocimientos/titulo.png"
+              alt="imagen del proyecto"
+              title="conocimientos 1"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_1">Diploma Ing. Electrimecánico</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_conocimientos_1"
+              >
+                Egresado en el año 2018 de la Universidad Tecnológica Nacional - Facultad Regional Resistencia.
+              </p>
+              <a href="./assets/docs/Titulo UTN.pdf" class="boton boton_oscuro" target="_blank"
+                >Ver Diploma</a
+              >
+            </div>
+          </article>
+          <!-- explicacion: pueden agregar tantas tarjetas como deseen, para ejemplificar agregaremos seis. 
+            Podemos hacerlo simplemente copiando y pegando. Yo en mi caso en algunas tarjetas agregare un pequeño cambio a los botones  -->
+          <article
+          class="tarjeta"
+          aria-label="presentacion de mis conocimientos"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/images/conocimientos/scrum.png"
+              alt="imagen del proyecto"
+              title="conocimientos 2"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_2">Certificado Scrum</h3>
+              <span class="tarjeta__divisor"></span>
+              <p
+                class="tarjeta__parrafo scroll scroll_fino scroll_gris"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_conocimientos_2"
+              >
+              Certificación emitida por SCRUMstudy, que acredita conocimientos básicos sobre la metodología Scrum, 
+              sus roles, eventos y artefactos. Brinda una comprensión general del marco ágil para la gestión de proyectos 
+              y el trabajo en equipo.
+              </p>
+              <a href="./assets/docs/ScrumFundamentalsCertified-JoseAudicio-1060211.pdf" class="boton boton_oscuro" target="_blank"
+                >Ver Certificado</a
+              >
+            </div>
+          </article>
+        </div>
+      </article>
+      <!-- repaso del articulo conocimientos -->
+    </main>
+    <!-- repaso de todo lo incluido en la etiqueta main -->
+
+    <!-- Por ultimo deben agregar la etiqueta footer. 
+      En esta aparecera nuestra informacion de contacto y 
+      también inluiremos enlaces de navegacion y derechos. -->
+    <footer class="pie_de_pagina" role="contentinfo">
+      <!-- explicacion: la primer columna sera para nuestras redes,
+        cabe aclarar que la estructura sera similar en todos los casos y solo habrá pequeños cambios -->
+      <div class="pie_de_pagina__columna">
+        <h4 class="pie_de_pagina__titulo_columna">Mis redes</h4>
+        <ul class="enlaces enlaces_redes">
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="https://github.com/JosePaen"
+              target="_blank"
+              ><img
+                class="enlaces__icono"
+                src="./assets/images/logos/github-logo.png"
+                alt="logo de github"
+                title="github"
+            /></a>
+          </li>
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="https://www.instagram.com/josepaen/"
+              target="_blank"
+            >
+              <img
+                class="enlaces__icono"
+                src="./assets/images/logos/ig-logo.png"
+                alt="logo de instagram"
+                title="instagram"
+              />
+            </a>
+          </li>
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="https://www.linkedin.com/in/jose-audicio/"
+              target="_blank"
+              ><img
+                class="enlaces__icono"
+                src="./assets/images/logos/linkedin-logo.png"
+                alt="logo de X"
+                title="X"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <!-- explicacion: la segunda columna sera para nuestros medios de contacto  -->
+      <div class="pie_de_pagina__columna">
+        <h4 class="pie_de_pagina__titulo_columna">Contactame</h4>
+        <ul class="enlaces enlaces_vertical">
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="mailto:jose.audicio@gmail.com"
+              target="_blank"
+              >Mail: jose.audicio@gmail.com</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- explicacion: la ultima columna sera para los enlaces de navegacion -->
+      <div class="pie_de_pagina__columna" role="navigation">
+        <h4 class="pie_de_pagina__titulo_columna">Secciones</h4>
+        <ul class="enlaces enlaces_vertical">
+          <li class="enlaces__item">
+            <a
+              class="enlaces__enlace enlaces__enlace_footer"
+              href="#presentacion"
+              >Inicio</a
+            >
+          </li>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace enlaces__enlace_footer" href="#sobre-mi"
+              >Sobre mi</a
+            >
+          </li>
+          <li class="enlaces__item">
+            <a class="enlaces__enlace enlaces__enlace_footer" href="#conocimientos"
+              >Mis conocimientos</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- por ultimo los derechos de la pagina -->
+      <div class="pie_de_pagina__copyright">
+        <p>©️Copyright 2024</p>
+      </div>
+    </footer>
+    <!-- repaso de los elementos en el footer -->
+  </body>
+</html>
