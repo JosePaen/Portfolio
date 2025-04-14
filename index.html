@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Ing Audicio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" /> <!-- CAMBIAR ESTAS IMAGENES/ICONOS-->
+    <link rel="shortcut icon" href="./assets/images/profile/yo-temp.png" type="image/x-icon" /> <!-- CAMBIAR ESTAS IMAGENES/ICONOS-->
   </head>
   <!-- repaso de la estructura del head -->
   <!-- explicacion: Luego deben agregar el body -->
@@ -22,17 +22,17 @@
     <header class="encabezado">
       <nav class="navegacion">
         <a class="navegacion__enlace" href="#presentacion">
-          <h2 class="navegacion__titulo">Jose R. Audicio</h2>
+          <h2 class="navegacion__titulo"> Ing. Jose Audicio </h2>
         </a>
         <ul class="enlaces">
           <li class="enlaces__item">
             <a class="enlaces__enlace" href="#presentacion">Inicio</a>
           </li>
           <li class="enlaces__item">
-            <a class="enlaces__enlace" href="#sobre-mi">Sobre mi</a>
+            <a class="enlaces__enlace" href="#formacion">Formación</a>
           </li>
           <li class="enlaces__item">
-            <a class="enlaces__enlace" href="#conocimientos">Mis Conocimientos</a>
+            <a class="enlaces__enlace" href="#proyectos">proyectos</a>
           </li>
         </ul>
       </nav>
@@ -45,13 +45,23 @@
 
       <!-- explicacion: Comenzaremos incluyendo una vista de presentacion -->
       <section class="presentacion" id="presentacion">
+        <div class="presentacion__contenedor">
+          <div class="presentacion__imagen">
+            <img src="./assets/images/profile/yo-temp.png" alt="Foto de José Audicio" />
+          </div>
         <div class="presentacion__contenedor_info">
-          <h1 class="presentacion__titulo">Ing. Electromecánico</h1>
           <p class="presentacion__parrafo">
-            Ingeniero Electromecánico en transición hacia el mundo tech. Me capacito en Data Science y desarrollo web.
+            Ingeniero Electromecánico con sólida experiencia en mantenimiento, construcción y supervisión de obras en sectores públicos y privados. A lo largo de mi carrera, he liderado equipos técnicos y coordinado proyectos en diversas áreas, donde desempeñé roles clave en operaciones y gestión.
+          </p>
+        
+          <p class="presentacion__parrafo">
+            Actualmente, me encuentro en una etapa de transición hacia el ámbito tecnológico, capacitándome activamente en Data Science (Python, SQL, R) y desarrollo web (HTML, CSS, Git/GitHub). Mi objetivo es integrar mi formación técnica y habilidades de resolución de problemas con nuevas competencias digitales, aportando valor en proyectos innovadores y de impacto.
+          </p>
+        
+          <p class="presentacion__parrafo">
+            Me identifico como un profesional colaborativo y orientado al aprendizaje continuo, buscando siempre entornos que valoren la diversidad de perspectivas y fomenten la innovación.
           </p>
           <div class="presentacion__contenedor_botones">
-            <a href="#sobre-mi" class="boton" role="button">Sobre mí</a>
             <a
               href="./assets/docs/CV - Jose Audicio.pdf"
               target="_blank"
@@ -63,80 +73,8 @@
         </div>
       </section>
       <!-- repaso de las partes de la seccion -->
-
-      <!-- explicacion: Ahora agregaremos una seccion donde nos explayaremos 
-        sobre nuestra historia personal, para ello escribiremos lo siguiente -->
-      <article class="articulo sobre_mi" id="sobre-mi">
-        <h2 class="articulo__titulo">Conoceme</h2>
-        <div class="articulo__contenedor_descripciones">
-          <section class="seccion_descripcion">
-            <div class="seccion_descripcion__porta_retrato">
-              <img
-                class="seccion_descripcion__imagen"
-                src="./assets/images/profile/yo-temp.png"
-                alt="foto personal"
-                title="Yo"
-              />
-            </div>
-            <div
-              class="seccion_descripcion__info scroll scroll_fino scroll_gris"
-              aria-label="descripcion personal"
-            >
-              <h3 class="seccion_descripcion__titulo" id="sobre_mi">
-                Sobre mi
-              </h3>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles sobre mi"
-                aria-describedby="sobre_mi"
-              >
-              Soy Ingeniero Electromecánico con experiencia en mantenimiento, construcción, coordinación técnica y supervisión de obras,
-              tanto en el sector público como privado. 
-              Actualmente me encuentro en una etapa de transición profesional hacia el mundo de la tecnología, 
-              capacitándome activamente en Data Science (Python, SQL, R), así como en herramientas de desarrollo web como HTML, CSS y Git/GitHub.
-              Busco combinar mi base técnica y resolutiva con nuevas habilidades digitales para aportar valor en proyectos innovadores y con impacto.
-              </p>
-            </div>
-          </section>
-          <!-- explicacion: seguidamente tendremos una seccion muy similar a la anterior 
-            pero cambiaremos el orden de los elementos dejando la imagen al final -->
-          <section class="seccion_descripcion">
-            <div
-              class="seccion_descripcion__info scroll scroll_fino scroll_gris"
-              aria-label="descripcion personal"
-            >
-              <h3 class="seccion_descripcion__titulo" id="mis_trayectoria">
-                Mi trayectoria profesional
-              </h3>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles de mi trayectoria"
-                aria-describedby="mi_trayectoria_titulo"
-              >
-              Comencé mi carrera como Técnico en instalaciones eléctricas industriales, participando en la puesta en marcha de maquinaria y tableros de control. 
-              Con el tiempo, sumé experiencia en mantenimiento, supervisión y coordinación de equipos en entornos operativos. 
-              Trabajé en empresas de distintos rubros, incluyendo la agroindustria y el sector gastronómico, donde llegué a desempeñarme como encargado de operaciones. A lo largo de estos años, 
-              desarrollé habilidades técnicas, de gestión y resolución de problemas, que hoy complemento con formación en tecnologías digitales.
-              </p>
-            </div>
-            <div class="seccion_descripcion__porta_retrato">
-              <img
-                class="seccion_descripcion__imagen"
-                src="./assets/images/profile/negro.png"
-                alt="negro"
-                title="negro"
-              />
-            </div>
-          </section>
-        </div>
-      </article>
-      <!-- repaso article sobre mi y su estructura -->
-
-      <!-- explicacion: En la seccion que sigue agregaremos los proyectos en los que trabajaron,
-      no se preocupen si todavia no cuentan con ninguno, en el momento que comiencen a construirlos 
-      podran ir actualizando la informacion de esta seccion -->
-      <article class="articulo conocimientos" id="conocimientos">
-        <h2 class="articulo__titulo">Mis Conocimientos</h2>
+      <article class="articulo conocimientos" id="formacion">
+        <h2 class="articulo__titulo">Formación</h2>
         <div class="contenedor_tarjetas_grid">
           <article
           class="tarjeta"
@@ -149,7 +87,7 @@
               title="conocimientos 1"
             />
             <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_1">Diploma Ing. Electrimecánico</h3>
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_1">Ingeniería Electrimecánica</h3>
               <span class="tarjeta__divisor"></span>
               <p
                 class="tarjeta__parrafo scroll scroll_fino"
@@ -165,10 +103,7 @@
           </article>
           <!-- explicacion: pueden agregar tantas tarjetas como deseen, para ejemplificar agregaremos seis. 
             Podemos hacerlo simplemente copiando y pegando. Yo en mi caso en algunas tarjetas agregare un pequeño cambio a los botones  -->
-          <article
-          class="tarjeta"
-          aria-label="presentacion de mis conocimientos"
-          >
+          <article class="tarjeta tarjeta--invertida" aria-label="presentacion de mis conocimientos">
             <img
               class="tarjeta__imagen"
               src="./assets/images/conocimientos/scrum.png"
@@ -176,19 +111,109 @@
               title="conocimientos 2"
             />
             <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_2">Certificado Scrum</h3>
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_2">Metodología Scrum</h3>
+              <span class="tarjeta__divisor"></span>
+              <p class="tarjeta__parrafo scroll scroll_fino scroll_gris" aria-describedby="titulo_conocimientos_2">
+                Certificación emitida por SCRUMstudy, que acredita conocimientos básicos sobre la metodología Scrum, 
+                sus roles, eventos y artefactos. Brinda una comprensión general del marco ágil para la gestión de proyectos 
+                y el trabajo en equipo.
+              </p>
+              <a href="./assets/docs/ScrumFundamentalsCertified-JoseAudicio-1060211.pdf" class="boton boton_oscuro" target="_blank">Ver Certificado</a>
+            </div>
+          </article>
+          <article
+          class="tarjeta"
+          aria-label="presentacion de mis conocimientos"
+          >
+            <img
+              class="tarjeta__imagen"
+              src="./assets/images/conocimientos/etapa 1.png"
+              alt="imagen del proyecto"
+              title="conocimientos 3"
+            />
+            <div class="tarjeta__contenido">
+              <h3 class="tarjeta__titulo" id="titulo_proyecto_2">Desarrollo Web</h3>
               <span class="tarjeta__divisor"></span>
               <p
                 class="tarjeta__parrafo scroll scroll_fino scroll_gris"
                 aria-label="descripcion de proyecto personal"
                 aria-describedby="titulo_conocimientos_2"
               >
-              Certificación emitida por SCRUMstudy, que acredita conocimientos básicos sobre la metodología Scrum, 
-              sus roles, eventos y artefactos. Brinda una comprensión general del marco ágil para la gestión de proyectos 
-              y el trabajo en equipo.
+              Curso enfocado en el desarrollo web utilizando HTML, CSS, Git y GitHub. 
+              Certificación emitida por la Subsecretaría de Industria, Empleo y Comercio del 
+              Ministerio de Producción y Desarrollo Sostenible de la Provincia del Chaco, 
+              con el respaldo de empresas asociadas al programa, como Globant, Polo IT y ECOM Chaco S.A.
               </p>
-              <a href="./assets/docs/ScrumFundamentalsCertified-JoseAudicio-1060211.pdf" class="boton boton_oscuro" target="_blank"
+              <a href="./assets/docs/Desarrollo Web - Informatorio.pdf" class="boton boton_oscuro" target="_blank"
                 >Ver Certificado</a
+              >
+            </div>
+          </article>
+        </div>
+      </article>
+
+      <!-- explicacion: Ahora agregaremos una seccion donde nos explayaremos 
+        sobre nuestra historia personal, para ello escribiremos lo siguiente -->
+
+      <!-- explicacion: En la seccion que sigue agregaremos los proyectos en los que trabajaron,
+      no se preocupen si todavia no cuentan con ninguno, en el momento que comiencen a construirlos 
+      podran ir actualizando la informacion de esta seccion -->
+      <article class="articulo proyectos" id="proyectos">
+        <h2 class="articulo__titulo__proyecto">Proyectos</h2>
+        <div class="contenedor_tarjetas_grid_proyecto">
+          <article
+          class="tarjeta__proyecto"
+          aria-label="presentacion de mis conocimientos"
+          >
+            <img
+              class="tarjeta__imagen__proyecto"
+              src="./assets/images/Proyectos/Jose.png"
+              alt="imagen del proyecto"
+              title="proyecto 1"
+            />
+            <div class="tarjeta__contenido__proyecto">
+              <h3 class="tarjeta__titulo__proyecto" id="titulo_proyecto_1">Portfolio</h3>
+              <span class="tarjeta__divisor__proyecto"></span>
+              <p
+                class="tarjeta__parrafo__proyecto scroll scroll_fino"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_conocimientos_1"
+              >
+              Proyecto inicial del curso de desarrollo web.
+              Portfolio profesional donde aplico HTML, CSS y GitHub para presentar mi perfil y formación.
+              </p>
+              <a href="https://josepaen.github.io/Portfolio/" class="boton boton_oscuro" target="_blank"
+                >Ir al proyecto</a
+              >
+            </div>
+          </article>
+          <!-- explicacion: pueden agregar tantas tarjetas como deseen, para ejemplificar agregaremos seis. 
+            Podemos hacerlo simplemente copiando y pegando. Yo en mi caso en algunas tarjetas agregare un pequeño cambio a los botones  -->
+          <article
+          class="tarjeta__proyecto"
+          aria-label="presentacion de mis conocimientos"
+          >
+            <img
+              class="tarjeta__imagen__proyecto"
+              src="./assets/images/Proyectos/Justi.png"
+              alt="imagen del proyecto"
+              title="conocimientos 2"
+            />
+            <div class="tarjeta__contenido__proyecto">
+              <h3 class="tarjeta__titulo__proyecto" id="titulo_proyecto_2">Portfolio</h3>
+              <span class="tarjeta__divisor__proyecto"></span>
+              <p
+                class="tarjeta__parrafo__proyecto scroll scroll_fino scroll_gris"
+                aria-label="descripcion de proyecto personal"
+                aria-describedby="titulo_conocimientos_2"
+              >
+              Portolio para la diseñadora La Justi 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione hic aut nisi unde reiciendis natus, cumque dignissimos reprehenderit perspiciatis impedit et eum architecto dicta odio in voluptatum nostrum ipsa repellat.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores porro, nihil unde autem alias repellat sapiente adipisci nemo illo rem incidunt natus eius pariatur vel dolor tempore illum consequuntur nisi.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis soluta doloribus sed repellendus quo obcaecati eum illo id accusantium distinctio voluptate eos, sequi perspiciatis. Optio quod sit voluptates tempora dolore!
+              </p>
+              <a href="./assets/images/Proyectos/Justi.png" class="boton boton_oscuro" target="_blank"
+                >Ir al proyecto</a
               >
             </div>
           </article>
@@ -273,13 +298,13 @@
             >
           </li>
           <li class="enlaces__item">
-            <a class="enlaces__enlace enlaces__enlace_footer" href="#sobre-mi"
-              >Sobre mi</a
+            <a class="enlaces__enlace enlaces__enlace_footer" href="#formacion"
+              >Formación</a
             >
           </li>
           <li class="enlaces__item">
-            <a class="enlaces__enlace enlaces__enlace_footer" href="#conocimientos"
-              >Mis conocimientos</a
+            <a class="enlaces__enlace enlaces__enlace_footer" href="#proyectos"
+              >Proyectos</a
             >
           </li>
         </ul>
